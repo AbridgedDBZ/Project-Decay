@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://boguoxi66aq28"]
+
+[ext_resource type="PackedScene" uid="uid://xlrqjs8xq8ft" path="res://Menus/pause_menu.tscn" id="1_lu1dr"]
+[ext_resource type="PackedScene" uid="uid://6a6faox4rr4l" path="res://Characters/maatet.tscn" id="2_2xra5"]
+
+[node name="test_scene" type="Node2D"]
+
+[node name="Maatet" parent="." instance=ExtResource("2_2xra5")]
+position = Vector2(487, 295)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Maatet"]
+
+[node name="pause menu" parent="Maatet/CanvasLayer2" instance=ExtResource("1_lu1dr")]
