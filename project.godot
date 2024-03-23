@@ -15,7 +15,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 
 [autoload]
 
-globala="*res://Coding/globala.gd"
+globala="*res://Coding/AutoLoads/globala.gd"
 
 [display]
 
