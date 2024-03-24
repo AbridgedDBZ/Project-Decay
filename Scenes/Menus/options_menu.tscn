@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://qf6su6xgjcya"]
+[gd_scene load_steps=4 format=3 uid="uid://qf6su6xgjcya"]
 
 [ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/settings_tab_container.tscn" id="1_dx63j"]
+[ext_resource type="Script" path="res://Coding/Menus/options_menu.gd" id="1_v4vhq"]
 
 [sub_resource type="SystemFont" id="SystemFont_y61qs"]
 font_names = PackedStringArray("Impact")
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_v4vhq")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -43,8 +45,10 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Exit_Options_Menu_Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Back
 "
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit_Options_Menu_Button" to="." method="_on_exit_options_menu_button_pressed"]
