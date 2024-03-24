@@ -160,6 +160,6 @@ offset = Vector2(0, -15)
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_a8juh")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Maatet"]
 position = Vector2(0, -18)
 zoom = Vector2(2.5, 2.5)

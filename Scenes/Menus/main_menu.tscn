@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://eixi3ccbd6we"]
+[gd_scene load_steps=13 format=3 uid="uid://eixi3ccbd6we"]
+
+[ext_resource type="Script" path="res://Coding/Menus/Main_menu_background.gd" id="1_6cli3"]
+[ext_resource type="Texture2D" uid="uid://dmomdf0ejq4ek" path="res://Assets - Art/Desert/1.Sky.png" id="1_f704u"]
+[ext_resource type="Script" path="res://Coding/Menus/main_menu.gd" id="1_hp7ka"]
+[ext_resource type="Texture2D" uid="uid://b8ehnhdohxsi6" path="res://Assets - Art/Desert/2.Clouds.png" id="2_08l78"]
+[ext_resource type="Script" path="res://Coding/Menus/options_menu.gd" id="2_17v58"]
+[ext_resource type="Texture2D" uid="uid://crw0insr583eg" path="res://Assets - Art/Desert/3.Mountains.png" id="3_eqqg8"]
+[ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/settings_tab_container.tscn" id="3_rrbvh"]
+[ext_resource type="Texture2D" uid="uid://beje3iieppbou" path="res://Assets - Art/Desert/4.Dunes.png" id="4_ei3rh"]
+[ext_resource type="Texture2D" uid="uid://co3ykujmjicux" path="res://Assets - Art/Desert/5.Ground.png" id="5_ljup5"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqamx"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_66mdy"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_y61qs"]
 font_names = PackedStringArray("Impact")
 
 [node name="Main Menu" type="Control"]
@@ -10,14 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+script = ExtResource("1_hp7ka")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -31,14 +40,14 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Title" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="MarginContainer/Title"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/Title"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.623529, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -49,6 +58,160 @@ theme_override_constants/outline_size = 24
 theme_override_constants/shadow_outline_size = 6
 theme_override_fonts/font = SubResource("SystemFont_gqamx")
 theme_override_font_sizes/font_size = 64
-text = "Game title"
+text = "Project  Decay"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Buttons"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Spacer2" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer4" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer5" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer6" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start_New_Game_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_66mdy")
+theme_override_font_sizes/font_size = 24
+text = "Start New Game"
+
+[node name="Continue_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_66mdy")
+theme_override_font_sizes/font_size = 24
+text = "Continue"
+
+[node name="Options_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_66mdy")
+theme_override_font_sizes/font_size = 24
+text = "Options"
+
+[node name="Quit_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_66mdy")
+theme_override_font_sizes/font_size = 24
+text = "Quit "
+
+[node name="Options Menu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_17v58")
+
+[node name="MarginContainer" type="MarginContainer" parent="Options Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options Menu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Label" type="Label" parent="Options Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_y61qs")
+theme_override_font_sizes/font_size = 32
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings Tab Container" parent="Options Menu/MarginContainer/VBoxContainer" instance=ExtResource("3_rrbvh")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Exit_Options_Menu_Button" type="Button" parent="Options Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Back
+"
+
+[node name="Main_menu_background" type="ParallaxBackground" parent="."]
+script = ExtResource("1_6cli3")
+MOUNTAIN_SPEED = 5
+DUNE_SPEED = 20
+GROUND_SPEED = 50
+
+[node name="Sky" type="ParallaxLayer" parent="Main_menu_background"]
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Sky"]
+position = Vector2(485.5, 272.5)
+scale = Vector2(3.07187, 3.10556)
+texture = ExtResource("1_f704u")
+
+[node name="Clouds" type="ParallaxLayer" parent="Main_menu_background"]
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Clouds"]
+position = Vector2(489, 199)
+scale = Vector2(3.07187, 3.10556)
+texture = ExtResource("2_08l78")
+
+[node name="Mountains" type="ParallaxLayer" parent="Main_menu_background"]
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Mountains"]
+position = Vector2(485.5, 272.5)
+scale = Vector2(3.07187, 3.10556)
+texture = ExtResource("3_eqqg8")
+
+[node name="Dunes" type="ParallaxLayer" parent="Main_menu_background"]
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Dunes"]
+position = Vector2(485.5, 272.5)
+scale = Vector2(3.07187, 3.10556)
+texture = ExtResource("4_ei3rh")
+
+[node name="Ground" type="ParallaxLayer" parent="Main_menu_background"]
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Ground"]
+position = Vector2(485.5, 272.5)
+scale = Vector2(3.07187, 3.10556)
+texture = ExtResource("5_ljup5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(481, 269)
+
+[connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Start_New_Game_Button" to="." method="_on_start_new_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Continue_Button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Options Menu/MarginContainer/VBoxContainer/Exit_Options_Menu_Button" to="." method="_on_exit_options_menu_button_pressed"]
+[connection signal="pressed" from="Options Menu/MarginContainer/VBoxContainer/Exit_Options_Menu_Button" to="Options Menu" method="_on_exit_options_menu_button_pressed"]

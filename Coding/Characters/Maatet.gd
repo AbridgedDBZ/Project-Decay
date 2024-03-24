@@ -15,19 +15,19 @@ func player():
 func get_input():
 	var input_direction := Input.get_vector("left", "right", "up", "down")
 	
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("right"):
 		current_dir = "right"
 		play_anim(1)
 		velocity = input_direction * speed
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("left"):
 		current_dir = "left"
 		play_anim(1)
 		velocity = input_direction * speed
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("down"):
 		current_dir = "down"
 		play_anim(1)
 		velocity = input_direction * speed
-	elif Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("up"):
 		current_dir = "up"
 		play_anim(1)
 		velocity = input_direction * speed

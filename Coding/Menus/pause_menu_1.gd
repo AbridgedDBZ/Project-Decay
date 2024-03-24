@@ -35,7 +35,7 @@ func _on_settings_pressed():
 
 func _on_main_menu_pressed():
 	var to_main_menu := func():
-		get_tree().change_scene_to_file("")
+		get_tree().change_scene_to_file("res://Scenes/Menus/main_menu.tscn")
 	to_main_menu.call_deferred()
 
 
