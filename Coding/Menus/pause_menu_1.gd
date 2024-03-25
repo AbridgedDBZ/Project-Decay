@@ -24,23 +24,19 @@ func test_esc():
 func _process(_delta):
 	test_esc()
 
-
 func _on_resume_pressed():
 	resume() # Replace with function body.
 
-
 func _on_main_menu_pressed():
 	var to_main_menu := func():
+		resume()
 		get_tree().change_scene_to_file("res://Scenes/Menus/main_menu.tscn")
 	to_main_menu.call_deferred()
 
 
-func _on_settings_pressed():
-	pass # Replace with function body.
-
 func _on_restart_pressed():
-	pass # Replace with function body.
-
+	resume()
+	get_tree().reload_current_scene()
 
 func _on_quit_pressed():
 	get_tree().quit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn5oc7kwhhhj3"]
+[gd_scene load_steps=7 format=3 uid="uid://bn5oc7kwhhhj3"]
 
 [ext_resource type="Script" path="res://Coding/Menus/pause_menu_1.gd" id="1_ek0ct"]
 [ext_resource type="Shader" path="res://Coding/Shaders/pause_menu_1.gdshader" id="2_m2yq1"]
@@ -6,10 +6,6 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq4af"]
 shader = ExtResource("2_m2yq1")
 shader_parameter/lod = 0.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jugby"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tvu5w"]
 
 [sub_resource type="Animation" id="Animation_av51y"]
 length = 0.001
@@ -93,60 +89,54 @@ grow_vertical = 2
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.292
+anchor_left = 0.328
 anchor_top = 0.139
-anchor_right = 0.725
+anchor_right = 0.691
 anchor_bottom = 0.843
-offset_left = -0.320038
-offset_top = -0.0600052
+offset_left = 0.119995
+offset_top = -0.0599976
+offset_right = -0.360046
 offset_bottom = -0.220032
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
-theme_override_constants/separation = 25
-
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-theme_override_styles/separator = SubResource("StyleBoxEmpty_jugby")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 35
 
 [node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(160, 40)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24
 text = "Resume
 "
 
 [node name="Main Menu" type="Button" parent="PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(160, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24
 text = "Main Menu
 "
 
-[node name="Settings" type="Button" parent="PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(160, 40)
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Settings
-"
-
 [node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(160, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24
 text = "Restart"
 
 [node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(160, 40)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24
 text = "Quit"
-
-[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-theme_override_styles/separator = SubResource("StyleBoxEmpty_tvu5w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -155,6 +145,5 @@ libraries = {
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

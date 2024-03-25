@@ -5,10 +5,10 @@ extends ParallaxBackground
 @onready var mountains = $Mountains
 @onready var dunes = $Dunes
 @onready var ground = $Ground
-@export var CLOUD_SPEED = -20
-@export var MOUNTAIN_SPEED = 20
+@export var CLOUD_SPEED = -2
+@export var MOUNTAIN_SPEED = 5
 @export var DUNE_SPEED = 15
-@export var GROUND_SPEED = 5
+@export var GROUND_SPEED = 20
 
 func _process(delta) -> void:
 	clouds.motion_offset.x += CLOUD_SPEED * delta

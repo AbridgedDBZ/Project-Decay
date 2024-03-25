@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://eixi3ccbd6we"]
+[gd_scene load_steps=16 format=3 uid="uid://eixi3ccbd6we"]
 
 [ext_resource type="Script" path="res://Coding/Menus/Main_menu_background.gd" id="1_6cli3"]
 [ext_resource type="Texture2D" uid="uid://dmomdf0ejq4ek" path="res://Assets - Art/Desert/1.Sky.png" id="1_f704u"]
@@ -9,15 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/settings_tab_container.tscn" id="3_rrbvh"]
 [ext_resource type="Texture2D" uid="uid://beje3iieppbou" path="res://Assets - Art/Desert/4.Dunes.png" id="4_ei3rh"]
 [ext_resource type="Texture2D" uid="uid://co3ykujmjicux" path="res://Assets - Art/Desert/5.Ground.png" id="5_ljup5"]
+[ext_resource type="AudioStream" uid="uid://cj6yd6h4h28pu" path="res://Audio/Stream Loops 2024-01-24_01.ogg" id="10_quv2o"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqamx"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmbpp"]
 
 [sub_resource type="SystemFont" id="SystemFont_66mdy"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_y61qs"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5g68"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -71,20 +79,10 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Spacer2" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Buttons/VBoxContainer"]
 layout_mode = 2
-
-[node name="Spacer3" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
-layout_mode = 2
-
-[node name="Spacer4" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
-layout_mode = 2
-
-[node name="Spacer5" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
-layout_mode = 2
-
-[node name="Spacer6" type="Control" parent="MarginContainer/Buttons/VBoxContainer"]
-layout_mode = 2
+theme_override_constants/separation = 80
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vmbpp")
 
 [node name="Start_New_Game_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
 custom_minimum_size = Vector2(200, 45)
@@ -154,60 +152,68 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Exit_Options_Menu_Button" type="Button" parent="Options Menu/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Options Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_j5g68")
+
+[node name="Exit_Options_Menu_Button" type="Button" parent="Options Menu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Back
 "
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_quv2o")
+autoplay = true
+bus = &"Music"
+
 [node name="Main_menu_background" type="ParallaxBackground" parent="."]
 script = ExtResource("1_6cli3")
-MOUNTAIN_SPEED = 5
 DUNE_SPEED = 20
 GROUND_SPEED = 50
 
 [node name="Sky" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1044, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Sky"]
-position = Vector2(485.5, 272.5)
-scale = Vector2(3.07187, 3.10556)
+position = Vector2(475, 272)
+scale = Vector2(3.2625, 3.3)
 texture = ExtResource("1_f704u")
 
 [node name="Clouds" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1044, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Clouds"]
-position = Vector2(489, 199)
-scale = Vector2(3.07187, 3.10556)
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
 texture = ExtResource("2_08l78")
 
 [node name="Mountains" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1044, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Mountains"]
-position = Vector2(485.5, 272.5)
-scale = Vector2(3.07187, 3.10556)
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
 texture = ExtResource("3_eqqg8")
 
 [node name="Dunes" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1044, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Dunes"]
-position = Vector2(485.5, 272.5)
-scale = Vector2(3.07187, 3.10556)
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
 texture = ExtResource("4_ei3rh")
 
 [node name="Ground" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1044, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Ground"]
-position = Vector2(485.5, 272.5)
-scale = Vector2(3.07187, 3.10556)
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
 texture = ExtResource("5_ljup5")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(481, 269)
 
 [connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Start_New_Game_Button" to="." method="_on_start_new_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Continue_Button" to="." method="_on_continue_button_pressed"]
