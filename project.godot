@@ -26,6 +26,7 @@ globala="*res://Coding/AutoLoads/globala.gd"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
