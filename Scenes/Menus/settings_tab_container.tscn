@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cr0sk7mbhwmca"]
+[gd_scene load_steps=8 format=3 uid="uid://cr0sk7mbhwmca"]
 
 [ext_resource type="PackedScene" uid="uid://bqsrekhdbsnt8" path="res://Scenes/Menus/hotkey_rebind_button.tscn" id="1_53dfv"]
 [ext_resource type="PackedScene" uid="uid://biuleiuebo2we" path="res://Scenes/Menus/window_mode_button.tscn" id="1_e6atj"]
 [ext_resource type="PackedScene" uid="uid://dby6mvb1vkhc0" path="res://Scenes/Menus/resolution_mode_button.tscn" id="2_q77uq"]
+[ext_resource type="PackedScene" uid="uid://2gbccqhravsi" path="res://Scenes/Menus/audio_slider_settings.tscn" id="4_ms3om"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gm3bb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fahsl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_st72h"]
 
 [node name="Settings Tab Container" type="Control"]
 layout_mode = 3
@@ -30,40 +33,8 @@ grow_vertical = 2
 tab_alignment = 1
 current_tab = 1
 
-[node name="Sound" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="TabContainer/Sound"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 65
-alignment = 1
-
-[node name="Label" type="Label" parent="TabContainer/Sound/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-text = "Master"
-
-[node name="Label6" type="Label" parent="TabContainer/Sound/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-text = "SFX"
-
-[node name="Label2" type="Label" parent="TabContainer/Sound/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-text = "Music"
-
 [node name="Graphics" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="TabContainer/Graphics"]
@@ -87,7 +58,7 @@ theme_override_constants/separation = 75
 
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/Graphics/MarginContainer2/SplitContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 10
 theme_override_styles/separator = SubResource("StyleBoxEmpty_gm3bb")
 
 [node name="Window_Mode_Button" parent="TabContainer/Graphics/MarginContainer2/SplitContainer/VBoxContainer" instance=ExtResource("1_e6atj")]
@@ -97,7 +68,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
@@ -113,7 +83,7 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/ScrollContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
+theme_override_constants/separation = 70
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -145,14 +115,14 @@ action_name = "interact"
 
 [node name="HSeparator3" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 0
 theme_override_styles/separator = SubResource("StyleBoxEmpty_fahsl")
 
-[node name="Accessibility" type="TabBar" parent="TabContainer"]
+[node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="TabContainer/Accessibility"]
+[node name="MarginContainer2" type="MarginContainer" parent="TabContainer/Sound"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -164,21 +134,24 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessibility/MarginContainer2"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sound/MarginContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer2/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 65
-alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Accessibility/MarginContainer2/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Sound/MarginContainer2/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Color Blind Mode"
+theme_override_styles/separator = SubResource("StyleBoxEmpty_st72h")
 
-[node name="Label6" type="Label" parent="TabContainer/Accessibility/MarginContainer2/VBoxContainer"]
+[node name="Audio_slider_settings" parent="TabContainer/Sound/MarginContainer2/ScrollContainer/VBoxContainer" instance=ExtResource("4_ms3om")]
 layout_mode = 2
-text = "Subtiles
-"
 
-[node name="Label2" type="Label" parent="TabContainer/Accessibility/MarginContainer2/VBoxContainer"]
+[node name="Audio_slider_settings2" parent="TabContainer/Sound/MarginContainer2/ScrollContainer/VBoxContainer" instance=ExtResource("4_ms3om")]
 layout_mode = 2
-text = "Language
-"
+bus_name = "Music"
+
+[node name="Audio_slider_settings3" parent="TabContainer/Sound/MarginContainer2/ScrollContainer/VBoxContainer" instance=ExtResource("4_ms3om")]
+layout_mode = 2
+bus_name = "SFx"
