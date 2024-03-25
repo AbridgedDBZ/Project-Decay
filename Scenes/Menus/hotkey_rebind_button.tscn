@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqsrekhdbsnt8"]
+[gd_scene load_steps=4 format=3 uid="uid://bqsrekhdbsnt8"]
 
 [ext_resource type="Script" path="res://Coding/Menus/hotkey_rebind_button.gd" id="1_lfjet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gnec8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4vgv"]
 
 [node name="Hotkey_Rebind_button" type="Control" groups=["hoykey_button"]]
 layout_mode = 3
@@ -22,6 +26,12 @@ offset_bottom = 20.0
 grow_vertical = 2
 alignment = 1
 
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gnec8")
+
 [node name="Label" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 30)
 layout_mode = 2
@@ -31,11 +41,15 @@ vertical_alignment = 1
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 200
+theme_override_constants/separation = 120
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_x4vgv")
 
 [node name="Button" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(164, 50)
+custom_minimum_size = Vector2(240, 50)
 layout_mode = 2
 toggle_mode = true
 text = "Action_Key"
