@@ -8,4 +8,5 @@ func _ready():
 	set_process(false)
 
 func _on_exit_options_menu_button_pressed():
+	SettingsSignalBus.emit_settings_dictionary(SettingsDataContainer.create_storage_dictionary())
 	set_process(false)

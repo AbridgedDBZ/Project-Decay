@@ -21,6 +21,9 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 [autoload]
 
 globala="*res://Coding/AutoLoads/globala.gd"
+SettingsSignalBus="*res://Coding/AutoLoads/settings_signal_bus.gd"
+SettingsDataContainer="*res://Coding/AutoLoads/settings_data_container.gd"
+SaveManager="*res://Coding/AutoLoads/save_manager.gd"
 
 [display]
 
