@@ -6,8 +6,11 @@ signal on_master_sound_set(value : float)
 signal on_music_sound_set(value : float)
 signal on_sfx_sound_set(value : float)
 
+
+
 signal set_settings_dictionary(setting_dict : Dictionary)
 signal load_settings_data(settings_dict : Dictionary)
+
 
 
 func emit_on_window_mode_selected(index : int) -> void:

@@ -8,12 +8,15 @@ extends Control
 
 var bus_index : int = 0
 
+
+
 func _ready():
 	h_slider.value_changed.connect(on_value_changed)
 	get_bus_name_by_index()
 	load_data()
 	set_name_label_text()
 	set_slider_value()
+
 
 
 func load_data() -> void:

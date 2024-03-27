@@ -692,4 +692,4 @@ layer_0/tile_data = PackedInt32Array(131075, 720899, 14, 0, 720899, 14, 65536, 7
 [node name="pause menu" parent="CanvasLayer" instance=ExtResource("2_xd4r0")]
 
 [node name="Maatet" parent="." instance=ExtResource("3_13rcp")]
-position = Vector2(487, 295)
+position = Vector2(503, 296)
