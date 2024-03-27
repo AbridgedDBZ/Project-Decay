@@ -1,16 +1,62 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqsrekhdbsnt8"]
+[gd_scene load_steps=9 format=3 uid="uid://bqsrekhdbsnt8"]
 
 [ext_resource type="Script" path="res://Coding/Menus/Buttons/hotkey_rebind_button.gd" id="1_knilb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gnec8"]
 
+[sub_resource type="SystemFont" id="SystemFont_0nglv"]
+font_names = PackedStringArray("Fantasy")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4vgv"]
+
+[sub_resource type="SystemFont" id="SystemFont_ptyt5"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvaq8"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_760dh"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71d28"]
+bg_color = Color(0.509804, 0.509804, 0.509804, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Hotkey_Rebind_button" type="Control" groups=["hoykey_button"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 15.0
+offset_right = 8.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_knilb")
@@ -35,6 +81,10 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_gnec8")
 [node name="Label" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 30)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.509804, 0, 0.0470588, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_0nglv")
 theme_override_font_sizes/font_size = 32
 text = "Action"
 vertical_alignment = 1
@@ -51,6 +101,11 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_x4vgv")
 [node name="Button" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(240, 50)
 layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ptyt5")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hvaq8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_760dh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71d28")
 toggle_mode = true
 text = "Action_Key"
 

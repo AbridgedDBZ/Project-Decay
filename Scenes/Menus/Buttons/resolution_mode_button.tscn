@@ -1,11 +1,103 @@
-[gd_scene load_steps=3 format=3 uid="uid://dby6mvb1vkhc0"]
+[gd_scene load_steps=11 format=3 uid="uid://dby6mvb1vkhc0"]
 
 [ext_resource type="PackedScene" uid="uid://b0ufgxofjfyig" path="res://Scenes/Menus/Buttons/options_display_button.tscn" id="1_my7tu"]
 [ext_resource type="Script" path="res://Coding/Menus/Buttons/resolution_mode_button.gd" id="2_emvhr"]
+
+[sub_resource type="SystemFont" id="SystemFont_gsy2r"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="SystemFont" id="SystemFont_ul7nn"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7st16"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wq5t"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0ary"]
+bg_color = Color(0.509804, 0.509804, 0.509804, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgq7o"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye10w"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kpx8"]
+bg_color = Color(0.509804, 0.509804, 0.509804, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Resolution_Mode_Button" instance=ExtResource("1_my7tu")]
 script = ExtResource("2_emvhr")
 
 [node name="Label" parent="HBoxContainer" index="0"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.509804, 0, 0.0470588, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_gsy2r")
 text = "Resolution 
 "
+
+[node name="OptionButton" parent="HBoxContainer" index="3"]
+theme_override_fonts/font = SubResource("SystemFont_ul7nn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_7st16")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0wq5t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s0ary")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_mgq7o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ye10w")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_0kpx8")

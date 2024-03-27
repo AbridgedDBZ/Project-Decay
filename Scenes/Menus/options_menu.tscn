@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://qf6su6xgjcya"]
+[gd_scene load_steps=5 format=3 uid="uid://qf6su6xgjcya"]
 
 [ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/Settings/settings_tab_container.tscn" id="1_dx63j"]
 [ext_resource type="Script" path="res://Coding/Menus/options_menu.gd" id="1_v4vhq"]
 
 [sub_resource type="SystemFont" id="SystemFont_y61qs"]
 font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6w5a5"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Options Menu" type="Control"]
 layout_mode = 3
@@ -50,6 +62,8 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_6w5a5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6w5a5")
 text = "Back
 "
 

@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://2gbccqhravsi"]
+[gd_scene load_steps=6 format=3 uid="uid://2gbccqhravsi"]
 
 [ext_resource type="Script" path="res://Coding/Menus/Settings/audio_slider_settings.gd" id="1_cxn8n"]
+
+[sub_resource type="SystemFont" id="SystemFont_7c3ee"]
+font_names = PackedStringArray("Fantasy")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s173p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irfw4"]
+
+[sub_resource type="SystemFont" id="SystemFont_eq8wb"]
+font_names = PackedStringArray("Fantasy")
 
 [node name="Audio_slider_settings" type="Control"]
 layout_mode = 3
@@ -23,8 +29,12 @@ offset_bottom = 40.0
 theme_override_constants/separation = 35
 
 [node name="Audio_Name_Lbl" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(280, 0)
+custom_minimum_size = Vector2(235, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.509804, 0, 0.0470588, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_7c3ee")
 theme_override_font_sizes/font_size = 32
 text = "Master Volume"
 
@@ -35,13 +45,6 @@ size_flags_vertical = 1
 max_value = 1.0
 step = 0.001
 
-[node name="Audio_Num_Lbl" type="Label" parent="HBoxContainer"]
-custom_minimum_size = Vector2(280, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "99.2
-"
-
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_s173p")
@@ -49,3 +52,13 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_s173p")
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_irfw4")
+
+[node name="Audio_Num_Lbl" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_eq8wb")
+theme_override_font_sizes/font_size = 32
+text = "99.2
+"
+
+[node name="Node2D" type="Node2D" parent="HBoxContainer"]
