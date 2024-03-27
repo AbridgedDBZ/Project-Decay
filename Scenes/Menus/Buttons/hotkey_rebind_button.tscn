@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqsrekhdbsnt8"]
 
-[ext_resource type="Script" path="res://Coding/Menus/hotkey_rebind_button.gd" id="1_lfjet"]
+[ext_resource type="Script" path="res://Coding/Menus/Buttons/hotkey_rebind_button.gd" id="1_knilb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gnec8"]
 
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lfjet")
+script = ExtResource("1_knilb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

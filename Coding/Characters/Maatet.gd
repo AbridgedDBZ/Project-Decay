@@ -4,13 +4,19 @@ extends CharacterBody2D
 
 var current_dir = "none"
 
+
+
 func _ready():
 	$AnimatedSprite2D.play("f_idle")
 	if globala.next_scene_position != Vector2(0,0):
 		position = globala.next_scene_position
 
+
+
 func player():
 	pass
+
+
 
 func get_input():
 	var input_direction := Input.get_vector("left", "right", "up", "down")
@@ -35,15 +41,20 @@ func get_input():
 		play_anim(0)
 		velocity.x = 0
 		velocity.y = 0
-	
+
+
+
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
 
+
+
 func play_anim(movement):
 	var anim = $AnimatedSprite2D
 	var dir = current_dir
-
+	
+	
 	if dir == "right":
 		anim.flip_h = false
 		if movement == 1:
@@ -56,7 +67,8 @@ func play_anim(movement):
 			anim.play("s_walk")
 		elif movement == 0:
 			anim.play("s_idle")
-
+	
+	
 	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:

@@ -1,15 +1,15 @@
 [gd_scene load_steps=16 format=3 uid="uid://eixi3ccbd6we"]
 
-[ext_resource type="Script" path="res://Coding/Menus/Main_menu_background.gd" id="1_6cli3"]
+[ext_resource type="Script" path="res://Coding/Menus/Settings/Main_menu_background.gd" id="1_6cli3"]
 [ext_resource type="Texture2D" uid="uid://dmomdf0ejq4ek" path="res://Assets - Art/Desert/1.Sky.png" id="1_f704u"]
 [ext_resource type="Script" path="res://Coding/Menus/main_menu.gd" id="1_hp7ka"]
 [ext_resource type="Texture2D" uid="uid://b8ehnhdohxsi6" path="res://Assets - Art/Desert/2.Clouds.png" id="2_08l78"]
 [ext_resource type="Script" path="res://Coding/Menus/options_menu.gd" id="2_17v58"]
 [ext_resource type="Texture2D" uid="uid://crw0insr583eg" path="res://Assets - Art/Desert/3.Mountains.png" id="3_eqqg8"]
-[ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/settings_tab_container.tscn" id="3_rrbvh"]
+[ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/Settings/settings_tab_container.tscn" id="3_rrbvh"]
 [ext_resource type="Texture2D" uid="uid://beje3iieppbou" path="res://Assets - Art/Desert/4.Dunes.png" id="4_ei3rh"]
 [ext_resource type="Texture2D" uid="uid://co3ykujmjicux" path="res://Assets - Art/Desert/5.Ground.png" id="5_ljup5"]
-[ext_resource type="AudioStream" uid="uid://cj6yd6h4h28pu" path="res://Audio/Stream Loops 2024-01-24_01.ogg" id="10_quv2o"]
+[ext_resource type="AudioStream" uid="uid://cj6yd6h4h28pu" path="res://Audio/Tracks/Stream Loops 2024-01-24_01.ogg" id="10_quv2o"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqamx"]
 font_names = PackedStringArray("Impact")

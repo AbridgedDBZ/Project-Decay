@@ -10,11 +10,15 @@ extends Control
 @onready var margin_container = $MarginContainer as MarginContainer
 
 
+
 func _on_start_new_game_button_pressed():
 	get_tree().change_scene_to_packed(start_level)
 
+
+
 func _on_continue_button_pressed():
 	pass # Replace with function body.
+
 
 
 func _on_options_button_pressed():
@@ -22,9 +26,13 @@ func _on_options_button_pressed():
 	options_button.set_process(true)
 	options_menu.visible = true
 
+
+
 func _on_exit_options_menu_button_pressed():
 	margin_container.visible = true
 	options_menu.visible = false
+
+
 
 func _on_quit_button_pressed():
 	get_tree().quit()

@@ -5,9 +5,11 @@ const SETTINGS_SAVE_PATH : String = "user://SettingsData.save"
 var settings_data_dict : Dictionary = {}
 
 
+
 func _ready():
 	SettingsSignalBus.set_settings_dictionary.connect(on_settings_save)
 	load_settings_data()
+
 
 
 func on_settings_save(data : Dictionary) -> void:
@@ -33,3 +35,4 @@ func load_settings_data() -> void:
 		
 		loaded_data = json.get_data()
 	SettingsSignalBus.emit_load_settings_data(loaded_data)
+	loaded_data = {}

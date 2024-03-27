@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="PLayerKeybindResource" load_steps=8 format=3 uid="uid://d14panxsaacy8"]
+
+[ext_resource type="Script" path="res://Scenes/Resources/Settings/playerkeybindresource.gd" id="1_nr56e"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_4l5xf"]
+device = -1
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_sfbi6"]
+device = -1
+physical_keycode = 4194306
+
+[sub_resource type="InputEventKey" id="InputEventKey_ui5yu"]
+device = -1
+physical_keycode = 69
+unicode = 101
+
+[sub_resource type="InputEventKey" id="InputEventKey_01s03"]
+device = -1
+physical_keycode = 65
+unicode = 97
+
+[sub_resource type="InputEventKey" id="InputEventKey_aby41"]
+device = -1
+physical_keycode = 68
+unicode = 100
+
+[sub_resource type="InputEventKey" id="InputEventKey_103mv"]
+device = -1
+physical_keycode = 87
+unicode = 119
+
+[resource]
+script = ExtResource("1_nr56e")
+DEFAULT_LEFT_KEY = SubResource("InputEventKey_01s03")
+DEFAULT_RIGHT_KEY = SubResource("InputEventKey_aby41")
+DEFAULT_UP_KEY = SubResource("InputEventKey_103mv")
+DEFAULT_DOWN_KEY = SubResource("InputEventKey_4l5xf")
+DEFAULT_INTERACT_KEY = SubResource("InputEventKey_ui5yu")
+DEFAULT_ESC_KEY = SubResource("InputEventKey_sfbi6")

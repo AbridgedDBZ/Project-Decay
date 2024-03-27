@@ -1,9 +1,71 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr0sk7mbhwmca"]
+[gd_scene load_steps=14 format=3 uid="uid://cr0sk7mbhwmca"]
 
-[ext_resource type="PackedScene" uid="uid://bqsrekhdbsnt8" path="res://Scenes/Menus/hotkey_rebind_button.tscn" id="1_53dfv"]
-[ext_resource type="PackedScene" uid="uid://biuleiuebo2we" path="res://Scenes/Menus/window_mode_button.tscn" id="1_e6atj"]
-[ext_resource type="PackedScene" uid="uid://dby6mvb1vkhc0" path="res://Scenes/Menus/resolution_mode_button.tscn" id="2_q77uq"]
-[ext_resource type="PackedScene" uid="uid://2gbccqhravsi" path="res://Scenes/Menus/audio_slider_settings.tscn" id="4_ms3om"]
+[ext_resource type="PackedScene" uid="uid://bqsrekhdbsnt8" path="res://Scenes/Menus/Buttons/hotkey_rebind_button.tscn" id="1_53dfv"]
+[ext_resource type="PackedScene" uid="uid://biuleiuebo2we" path="res://Scenes/Menus/Buttons/window_mode_button.tscn" id="1_e6atj"]
+[ext_resource type="Script" path="res://Coding/Menus/Settings/settings_tab_container.gd" id="1_umjct"]
+[ext_resource type="Texture2D" uid="uid://blgdmk3f2j4cn" path="res://Assets - Art/New Piskel.png" id="2_a6su0"]
+[ext_resource type="PackedScene" uid="uid://dby6mvb1vkhc0" path="res://Scenes/Menus/Buttons/resolution_mode_button.tscn" id="2_q77uq"]
+[ext_resource type="PackedScene" uid="uid://2gbccqhravsi" path="res://Scenes/Menus/Settings/audio_slider_settings.tscn" id="4_ms3om"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6s22"]
+resource_local_to_scene = true
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e7y1x"]
+resource_local_to_scene = true
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqtpj"]
+resource_local_to_scene = true
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(0.223529, 0.223529, 0.223529, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jdvl"]
+texture = ExtResource("2_a6su0")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gm3bb"]
 
@@ -18,6 +80,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_umjct")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -30,9 +93,14 @@ offset_right = -100.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_j6s22")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_e7y1x")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_nqtpj")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0jdvl")
 tab_alignment = 1
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="TabContainer/Graphics"]
@@ -66,6 +134,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
@@ -117,6 +186,7 @@ theme_override_constants/separation = 0
 theme_override_styles/separator = SubResource("StyleBoxEmpty_fahsl")
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="TabContainer/Sound"]
