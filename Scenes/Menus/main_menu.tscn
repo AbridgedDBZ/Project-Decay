@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://eixi3ccbd6we"]
+[gd_scene load_steps=23 format=3 uid="uid://eixi3ccbd6we"]
 
 [ext_resource type="Script" path="res://Coding/Menus/Settings/Main_menu_background.gd" id="1_6cli3"]
 [ext_resource type="Texture2D" uid="uid://dmomdf0ejq4ek" path="res://Assets - Art/Desert/1.Sky.png" id="1_f704u"]
@@ -12,14 +12,98 @@
 [ext_resource type="AudioStream" uid="uid://cj6yd6h4h28pu" path="res://Audio/Tracks/Stream Loops 2024-01-24_01.ogg" id="10_quv2o"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqamx"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Fantasy")
 subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmbpp"]
 
 [sub_resource type="SystemFont" id="SystemFont_66mdy"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Fantasy")
 subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n0fc"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhr1o"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wlow"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omx0p"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68t5n"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wrqi"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aeup3"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="SystemFont" id="SystemFont_y61qs"]
 font_names = PackedStringArray("Impact")
@@ -57,15 +141,15 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/Title"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.623529, 0, 1)
+theme_override_colors/font_color = Color(0.447059, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 6
-theme_override_constants/shadow_offset_y = 12
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 24
-theme_override_constants/shadow_outline_size = 6
+theme_override_constants/shadow_outline_size = 12
 theme_override_fonts/font = SubResource("SystemFont_gqamx")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 82
 text = "Project  Decay"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -88,28 +172,36 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_vmbpp")
 custom_minimum_size = Vector2(200, 45)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_66mdy")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5n0fc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xhr1o")
 text = "Start New Game"
 
 [node name="Continue_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
 custom_minimum_size = Vector2(200, 45)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_66mdy")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5n0fc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7wlow")
 text = "Continue"
 
 [node name="Options_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
 custom_minimum_size = Vector2(200, 45)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_66mdy")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_omx0p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_68t5n")
 text = "Options"
 
 [node name="Quit_Button" type="Button" parent="MarginContainer/Buttons/VBoxContainer"]
 custom_minimum_size = Vector2(200, 45)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_66mdy")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wrqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aeup3")
 text = "Quit "
 
 [node name="Options Menu" type="Control" parent="."]
@@ -129,10 +221,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Options Menu/MarginContainer"]
 layout_mode = 2
@@ -162,6 +254,8 @@ custom_minimum_size = Vector2(350, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_5n0fc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aeup3")
 text = "Back
 "
 

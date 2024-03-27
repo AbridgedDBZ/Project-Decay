@@ -1,0 +1,351 @@
+[gd_scene load_steps=16 format=3 uid="uid://dplssffukchj3"]
+
+[sub_resource type="Animation" id="Animation_qnwj7"]
+resource_name = "dawn_to_day"
+length = 100.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.866667, 0.54902, 0.627451, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xejwu"]
+resource_name = "day_to_dusk"
+length = 200.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.372549, 0.466667, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lantern_light:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Lantern_light2:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Lantern_light3:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Lantern_light4:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Lantern_light5:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Lantern_light6:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_yxlsi"]
+resource_name = "dusk_to_night"
+length = 100.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.372549, 0.466667, 1, 1), Color(0.188235, 0, 0.886275, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lantern_light:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.02]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Lantern_light2:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.02]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Lantern_light3:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.02]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Lantern_light4:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.02]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Lantern_light5:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.02]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Lantern_light6:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 2.02]
+}
+
+[sub_resource type="Animation" id="Animation_g6hib"]
+resource_name = "night_to_dawn"
+length = 200.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.188235, 0, 0.886275, 1), Color(0.866667, 0.54902, 0.627451, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lantern_light:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.02, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Lantern_light2:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.02, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Lantern_light3:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.02, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Lantern_light4:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.02, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Lantern_light5:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.02, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Lantern_light6:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 200),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.02, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kygtl"]
+_data = {
+"dawn_to_day": SubResource("Animation_qnwj7"),
+"day_to_dusk": SubResource("Animation_xejwu"),
+"dusk_to_night": SubResource("Animation_yxlsi"),
+"night_to_dawn": SubResource("Animation_g6hib")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_668va"]
+animation = &"dawn_to_day"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kspo5"]
+animation = &"day_to_dusk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_srhko"]
+animation = &"dusk_to_night"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_awh1n"]
+animation = &"night_to_dawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uctr1"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tmln3"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bn6v1"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_23lvi"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bsout"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lxs3h"]
+allow_transition_to_self = true
+states/End/position = Vector2(629, 71)
+states/Start/position = Vector2(65, 100)
+states/dawn_to_day/node = SubResource("AnimationNodeAnimation_668va")
+states/dawn_to_day/position = Vector2(249, 33)
+states/day_to_dusk/node = SubResource("AnimationNodeAnimation_kspo5")
+states/day_to_dusk/position = Vector2(456, 33)
+states/dusk_to_night/node = SubResource("AnimationNodeAnimation_srhko")
+states/dusk_to_night/position = Vector2(456, 120)
+states/night_to_dawn/node = SubResource("AnimationNodeAnimation_awh1n")
+states/night_to_dawn/position = Vector2(249, 120)
+transitions = ["dawn_to_day", "day_to_dusk", SubResource("AnimationNodeStateMachineTransition_uctr1"), "day_to_dusk", "dusk_to_night", SubResource("AnimationNodeStateMachineTransition_tmln3"), "dusk_to_night", "night_to_dawn", SubResource("AnimationNodeStateMachineTransition_bn6v1"), "Start", "dawn_to_day", SubResource("AnimationNodeStateMachineTransition_23lvi"), "night_to_dawn", "dawn_to_day", SubResource("AnimationNodeStateMachineTransition_bsout")]
+graph_offset = Vector2(-105, -11)
+
+[node name="day_night" type="CanvasModulate"]
+color = Color(0.879652, 0.592941, 0.663733, 1)
+
+[node name="day_cycle" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kygtl")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kygtl")
+}
+tree_root = SubResource("AnimationNodeStateMachine_lxs3h")
+anim_player = NodePath("../day_cycle")

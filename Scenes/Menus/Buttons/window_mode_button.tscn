@@ -1,10 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://biuleiuebo2we"]
+[gd_scene load_steps=8 format=3 uid="uid://biuleiuebo2we"]
 
 [ext_resource type="PackedScene" uid="uid://b0ufgxofjfyig" path="res://Scenes/Menus/Buttons/options_display_button.tscn" id="1_8risj"]
 [ext_resource type="Script" path="res://Coding/Menus/Buttons/window_mode_button.gd" id="2_nvcsf"]
+
+[sub_resource type="SystemFont" id="SystemFont_4igyw"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="SystemFont" id="SystemFont_vx3f6"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uidl3"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxwxy"]
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35fd3"]
+bg_color = Color(0.509804, 0.509804, 0.509804, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Window_Mode_Button" instance=ExtResource("1_8risj")]
 script = ExtResource("2_nvcsf")
 
 [node name="Label" parent="HBoxContainer" index="0"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.509804, 0, 0.0470588, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_4igyw")
 text = "Window Mode"
+
+[node name="OptionButton" parent="HBoxContainer" index="3"]
+theme_override_fonts/font = SubResource("SystemFont_vx3f6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_uidl3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gxwxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_35fd3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uidl3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_gxwxy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_35fd3")

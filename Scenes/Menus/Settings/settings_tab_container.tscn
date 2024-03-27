@@ -1,11 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://cr0sk7mbhwmca"]
+[gd_scene load_steps=15 format=3 uid="uid://cr0sk7mbhwmca"]
 
 [ext_resource type="PackedScene" uid="uid://bqsrekhdbsnt8" path="res://Scenes/Menus/Buttons/hotkey_rebind_button.tscn" id="1_53dfv"]
 [ext_resource type="PackedScene" uid="uid://biuleiuebo2we" path="res://Scenes/Menus/Buttons/window_mode_button.tscn" id="1_e6atj"]
 [ext_resource type="Script" path="res://Coding/Menus/Settings/settings_tab_container.gd" id="1_umjct"]
-[ext_resource type="Texture2D" uid="uid://blgdmk3f2j4cn" path="res://Assets - Art/New Piskel.png" id="2_a6su0"]
+[ext_resource type="Texture2D" uid="uid://blgdmk3f2j4cn" path="res://Assets - Art/Made_art/New Piskel.png" id="2_4d63g"]
 [ext_resource type="PackedScene" uid="uid://dby6mvb1vkhc0" path="res://Scenes/Menus/Buttons/resolution_mode_button.tscn" id="2_q77uq"]
 [ext_resource type="PackedScene" uid="uid://2gbccqhravsi" path="res://Scenes/Menus/Settings/audio_slider_settings.tscn" id="4_ms3om"]
+
+[sub_resource type="SystemFont" id="SystemFont_wd5y4"]
+font_names = PackedStringArray("Fantasy")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6s22"]
 resource_local_to_scene = true
@@ -65,7 +69,7 @@ expand_margin_right = 3.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jdvl"]
-texture = ExtResource("2_a6su0")
+texture = ExtResource("2_4d63g")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gm3bb"]
 
@@ -93,6 +97,13 @@ offset_right = -100.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_selected_color = Color(0.827451, 0, 0.976471, 1)
+theme_override_colors/font_hovered_color = Color(0.827451, 0, 0.976471, 1)
+theme_override_colors/font_unselected_color = Color(0.827451, 0, 0.976471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("SystemFont_wd5y4")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_j6s22")
 theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_e7y1x")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_nqtpj")
@@ -110,10 +121,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 30
 
 [node name="SplitContainer" type="SplitContainer" parent="TabContainer/Graphics/MarginContainer2"]
 layout_mode = 2
@@ -144,6 +155,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Controls/MarginContainer"]
 layout_mode = 2
