@@ -5,9 +5,11 @@
 
 [sub_resource type="SystemFont" id="SystemFont_gsy2r"]
 font_names = PackedStringArray("Fantasy")
+oversampling = 10.0
 
 [sub_resource type="SystemFont" id="SystemFont_ul7nn"]
 font_names = PackedStringArray("Fantasy")
+oversampling = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7st16"]
 bg_color = Color(0.294118, 0.294118, 0.294118, 1)

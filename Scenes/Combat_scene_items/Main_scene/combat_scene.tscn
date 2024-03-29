@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://28fo3n38o5k4"]
+
+[ext_resource type="PackedScene" uid="uid://qegdc1odk7qn" path="res://Scenes/Combat_scene_items/Groups/enemies.tscn" id="2_l6fgo"]
+[ext_resource type="PackedScene" uid="uid://c2no6onjhnk2h" path="res://Scenes/Combat_scene_items/Groups/players.tscn" id="3_04vuo"]
+
+[sub_resource type="SystemFont" id="SystemFont_gwmgt"]
+font_names = PackedStringArray("Calisto MT")
+oversampling = 10.0
+
+[node name="Combat Scene" type="Node2D"]
+
+[node name="Enemies" parent="." instance=ExtResource("2_l6fgo")]
+position = Vector2(141, 110)
+
+[node name="Players" parent="." instance=ExtResource("3_04vuo")]
+position = Vector2(813, 110)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Choice" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -143.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Attack" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_gwmgt")
+theme_override_font_sizes/font_size = 32
+text = "Attack"
+
+[node name="Defend" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_gwmgt")
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Defend"
+
+[node name="Run" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_gwmgt")
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Run"
+
+[connection signal="pressed" from="CanvasLayer/Choice/Attack" to="Enemies" method="_on_attack_pressed"]

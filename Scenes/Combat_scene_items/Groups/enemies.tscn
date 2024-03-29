@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://qegdc1odk7qn"]
+
+[ext_resource type="PackedScene" uid="uid://jnv7i66g7k0b" path="res://Scenes/Combat_scene_items/Editable Sprite/player_1.tscn" id="1_c5c2s"]
+[ext_resource type="Script" path="res://Coding/Combat Related/Groups/enemies.gd" id="1_suerh"]
+
+[node name="Enemies" type="Node2D"]
+script = ExtResource("1_suerh")
+
+[node name="Player_1" parent="." instance=ExtResource("1_c5c2s")]
+
+[node name="Player_2" parent="." instance=ExtResource("1_c5c2s")]
+
+[node name="Player_3" parent="." instance=ExtResource("1_c5c2s")]
+
+[node name="Player_4" parent="." instance=ExtResource("1_c5c2s")]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://caelyj5t7ho3y"]
+
+[ext_resource type="Script" path="res://Coding/Menus/Settings/Main_menu_background.gd" id="1_pvd23"]
+[ext_resource type="Texture2D" uid="uid://dmomdf0ejq4ek" path="res://Art Assets/Backgrounds/Desert/1.Sky.png" id="2_5b5a8"]
+[ext_resource type="Texture2D" uid="uid://b8ehnhdohxsi6" path="res://Art Assets/Backgrounds/Desert/2.Clouds.png" id="3_jmri2"]
+[ext_resource type="Texture2D" uid="uid://crw0insr583eg" path="res://Art Assets/Backgrounds/Desert/3.Mountains.png" id="4_7q1e8"]
+[ext_resource type="Texture2D" uid="uid://beje3iieppbou" path="res://Art Assets/Backgrounds/Desert/4.Dunes.png" id="5_8q8jv"]
+[ext_resource type="Texture2D" uid="uid://co3ykujmjicux" path="res://Art Assets/Backgrounds/Desert/5.Ground.png" id="6_wxto2"]
+
+[node name="Main_menu_background" type="ParallaxBackground"]
+script = ExtResource("1_pvd23")
+DUNE_SPEED = 20
+GROUND_SPEED = 50
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1044, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+position = Vector2(475, 272)
+scale = Vector2(3.2625, 3.3)
+texture = ExtResource("2_5b5a8")
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1044, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds"]
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
+texture = ExtResource("3_jmri2")
+
+[node name="Mountains" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1044, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mountains"]
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
+texture = ExtResource("4_7q1e8")
+
+[node name="Dunes" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1044, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Dunes"]
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
+texture = ExtResource("5_8q8jv")
+
+[node name="Ground" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1044, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+position = Vector2(475, 272)
+scale = Vector2(3.264, 3.3)
+texture = ExtResource("6_wxto2")
