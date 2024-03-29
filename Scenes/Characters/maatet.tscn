@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://6a6faox4rr4l"]
 
 [ext_resource type="Script" path="res://Coding/Characters/Maatet.gd" id="1_ar5ms"]
-[ext_resource type="Texture2D" uid="uid://cc5th4psbsbpu" path="res://Assets - Art/Mummy clock/all Merged/Merged Mummy sprites.png" id="1_kdbty"]
+[ext_resource type="Texture2D" uid="uid://cc5th4psbsbpu" path="res://Art Assets/Mummy clock/all Merged/Merged Mummy sprites.png" id="1_kdbty"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2geb"]
 atlas = ExtResource("1_kdbty")

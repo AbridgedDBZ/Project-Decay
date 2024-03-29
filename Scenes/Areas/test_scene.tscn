@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://boguoxi66aq28"]
 
-[ext_resource type="Texture2D" uid="uid://cmhib7h8t0opu" path="res://Assets - Art/House _PNG/Full Houses/FL_Houses_Houses.png" id="1_dk6dq"]
-[ext_resource type="Texture2D" uid="uid://535ffysmojdx" path="res://Assets - Art/Seasonal Sample/Autumn/seasonal sample (autumn).png" id="1_h1dc3"]
+[ext_resource type="Texture2D" uid="uid://cmhib7h8t0opu" path="res://Art Assets/House _PNG/Full Houses/FL_Houses_Houses.png" id="1_dk6dq"]
+[ext_resource type="Texture2D" uid="uid://535ffysmojdx" path="res://Art Assets/Seasonal Sample/Autumn/seasonal sample (autumn).png" id="1_h1dc3"]
 [ext_resource type="PackedScene" uid="uid://bn5oc7kwhhhj3" path="res://Scenes/Menus/pause_menu_1.tscn" id="2_xd4r0"]
 [ext_resource type="PackedScene" uid="uid://6a6faox4rr4l" path="res://Scenes/Characters/maatet.tscn" id="3_13rcp"]
 

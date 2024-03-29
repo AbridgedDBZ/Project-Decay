@@ -1,25 +1,22 @@
-[gd_scene load_steps=23 format=3 uid="uid://eixi3ccbd6we"]
+[gd_scene load_steps=18 format=3 uid="uid://eixi3ccbd6we"]
 
-[ext_resource type="Script" path="res://Coding/Menus/Settings/Main_menu_background.gd" id="1_6cli3"]
-[ext_resource type="Texture2D" uid="uid://dmomdf0ejq4ek" path="res://Assets - Art/Desert/1.Sky.png" id="1_f704u"]
 [ext_resource type="Script" path="res://Coding/Menus/main_menu.gd" id="1_hp7ka"]
-[ext_resource type="Texture2D" uid="uid://b8ehnhdohxsi6" path="res://Assets - Art/Desert/2.Clouds.png" id="2_08l78"]
 [ext_resource type="Script" path="res://Coding/Menus/options_menu.gd" id="2_17v58"]
-[ext_resource type="Texture2D" uid="uid://crw0insr583eg" path="res://Assets - Art/Desert/3.Mountains.png" id="3_eqqg8"]
-[ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/Settings/settings_tab_container.tscn" id="3_rrbvh"]
-[ext_resource type="Texture2D" uid="uid://beje3iieppbou" path="res://Assets - Art/Desert/4.Dunes.png" id="4_ei3rh"]
-[ext_resource type="Texture2D" uid="uid://co3ykujmjicux" path="res://Assets - Art/Desert/5.Ground.png" id="5_ljup5"]
+[ext_resource type="PackedScene" uid="uid://cr0sk7mbhwmca" path="res://Scenes/Menus/settings_tab_container.tscn" id="3_rrbvh"]
+[ext_resource type="PackedScene" uid="uid://caelyj5t7ho3y" path="res://Scenes/Resources/Reusable/Parallax_background.tscn" id="5_n2cu1"]
 [ext_resource type="AudioStream" uid="uid://cj6yd6h4h28pu" path="res://Audio/Tracks/Stream Loops 2024-01-24_01.ogg" id="10_quv2o"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqamx"]
 font_names = PackedStringArray("Fantasy")
 subpixel_positioning = 0
+oversampling = 10.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmbpp"]
 
 [sub_resource type="SystemFont" id="SystemFont_66mdy"]
 font_names = PackedStringArray("Fantasy")
 subpixel_positioning = 0
+oversampling = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n0fc"]
 bg_color = Color(0.294118, 0.294118, 0.294118, 1)
@@ -106,8 +103,9 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="SystemFont" id="SystemFont_y61qs"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Fantasy")
 subpixel_positioning = 0
+oversampling = 10.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5g68"]
 
@@ -232,13 +230,19 @@ theme_override_constants/separation = -48
 
 [node name="Label" type="Label" parent="Options Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.819608, 0, 0, 1)
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_y61qs")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 50
 text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Options Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxEmpty_j5g68")
 
 [node name="Settings Tab Container" parent="Options Menu/MarginContainer/VBoxContainer" instance=ExtResource("3_rrbvh")]
 layout_mode = 2
@@ -264,50 +268,7 @@ stream = ExtResource("10_quv2o")
 autoplay = true
 bus = &"Music"
 
-[node name="Main_menu_background" type="ParallaxBackground" parent="."]
-script = ExtResource("1_6cli3")
-DUNE_SPEED = 20
-GROUND_SPEED = 50
-
-[node name="Sky" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(1044, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Sky"]
-position = Vector2(475, 272)
-scale = Vector2(3.2625, 3.3)
-texture = ExtResource("1_f704u")
-
-[node name="Clouds" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(1044, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Clouds"]
-position = Vector2(475, 272)
-scale = Vector2(3.264, 3.3)
-texture = ExtResource("2_08l78")
-
-[node name="Mountains" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(1044, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Mountains"]
-position = Vector2(475, 272)
-scale = Vector2(3.264, 3.3)
-texture = ExtResource("3_eqqg8")
-
-[node name="Dunes" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(1044, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Dunes"]
-position = Vector2(475, 272)
-scale = Vector2(3.264, 3.3)
-texture = ExtResource("4_ei3rh")
-
-[node name="Ground" type="ParallaxLayer" parent="Main_menu_background"]
-motion_mirroring = Vector2(1044, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_menu_background/Ground"]
-position = Vector2(475, 272)
-scale = Vector2(3.264, 3.3)
-texture = ExtResource("5_ljup5")
+[node name="Main_menu_background" parent="." instance=ExtResource("5_n2cu1")]
 
 [connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Start_New_Game_Button" to="." method="_on_start_new_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/Buttons/VBoxContainer/Continue_Button" to="." method="_on_continue_button_pressed"]
