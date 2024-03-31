@@ -3513,7 +3513,7 @@ position = Vector2(-1382, 941)
 next_change_scene = "res://Scenes/Areas/lexs_house.tscn"
 
 [node name="day_night" type="CanvasModulate" parent="."]
-color = Color(0.670437, 0.719871, 1, 1)
+color = Color(0.878332, 0.588475, 0.660044, 1)
 
 [node name="day_cycle" type="AnimationPlayer" parent="day_night"]
 libraries = {
