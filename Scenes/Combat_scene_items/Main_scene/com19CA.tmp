@@ -49,5 +49,3 @@ theme_override_fonts/font = SubResource("SystemFont_gwmgt")
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Run"
-
-[connection signal="pressed" from="CanvasLayer/Choice/Attack" to="Enemies" method="_on_attack_pressed"]

@@ -5,7 +5,7 @@ extends Control
 @onready var continue_button = $MarginContainer/Buttons/VBoxContainer/Continue_Button as Button
 @onready var options_button = $MarginContainer/Buttons/VBoxContainer/Options_Button as Button
 @onready var quit_button = $MarginContainer/Buttons/VBoxContainer/Quit_Button as Button
-@onready var start_level = preload("res://Scenes/Combat_scene_items/Main_scene/combat_scene.tscn") as PackedScene
+@onready var start_level = preload("res://Scenes/Combat_scene_items/Main_scene/fight_scene.tscn") as PackedScene
 @onready var options_menu = $"Options Menu" as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 

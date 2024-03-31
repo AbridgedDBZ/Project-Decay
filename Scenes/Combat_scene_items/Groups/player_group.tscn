@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4q5tn5jjcmla"]
+
+[ext_resource type="Script" path="res://Coding/Combat Related/Groups/player_group.gd" id="1_nt2mc"]
+[ext_resource type="PackedScene" uid="uid://csfbdltbiyn03" path="res://Scenes/Combat_scene_items/Editable Sprite/character.tscn" id="1_ulpke"]
+[ext_resource type="Texture2D" uid="uid://ble351fc1hof6" path="res://Art Assets/Misc/Ready_00_32.png" id="2_p8pw8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w143v"]
+load_path = "res://.godot/imported/cursor_finger.png-5834ca60c0ad138494abc9cbd0e66a97.ctex"
+
+[node name="Player_Group" type="Node2D"]
+script = ExtResource("1_nt2mc")
+
+[node name="Character" parent="." instance=ExtResource("1_ulpke")]
+
+[node name="Sprite2D" parent="Character" index="2"]
+texture = ExtResource("2_p8pw8")
+
+[node name="Focus" parent="Character" index="3"]
+texture = SubResource("CompressedTexture2D_w143v")
+
+[node name="Character2" parent="." instance=ExtResource("1_ulpke")]
+
+[node name="Sprite2D" parent="Character2" index="2"]
+texture = ExtResource("2_p8pw8")
+
+[node name="Focus" parent="Character2" index="3"]
+texture = SubResource("CompressedTexture2D_w143v")
+
+[node name="Character3" parent="." instance=ExtResource("1_ulpke")]
+
+[node name="Sprite2D" parent="Character3" index="2"]
+texture = ExtResource("2_p8pw8")
+
+[node name="Focus" parent="Character3" index="3"]
+texture = SubResource("CompressedTexture2D_w143v")
+
+[node name="Character4" parent="." instance=ExtResource("1_ulpke")]
+
+[node name="Sprite2D" parent="Character4" index="2"]
+texture = ExtResource("2_p8pw8")
+
+[node name="Focus" parent="Character4" index="3"]
+texture = SubResource("CompressedTexture2D_w143v")
+
+[editable path="Character"]
+[editable path="Character2"]
+[editable path="Character3"]
+[editable path="Character4"]
