@@ -141,12 +141,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a8juh"]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yka4o"]
+radius = 3.0
+height = 14.0
 
 [node name="Maatet" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Maatet" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("1_ar5ms")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Maatet"]
@@ -157,8 +160,9 @@ frame_progress = 0.504568
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Maatet"]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_a8juh")
+position = Vector2(0, -1)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_yka4o")
 
 [node name="Camera2D" type="Camera2D" parent="Maatet"]
 position = Vector2(0, -18)

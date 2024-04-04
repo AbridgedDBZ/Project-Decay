@@ -5,9 +5,9 @@ extends CharacterBody2D
 @onready var animation_player = $AnimationPlayer
 @onready var _select = $Select
 
-@export var MAX_HEALTH: float = 7
+@export var MAX_HEALTH: float = 10
 
-var health: float = 7:
+var health: float = 10:
 	set(value):
 		health = value
 		_update_progress_bar()
@@ -34,3 +34,6 @@ func unfocus():
  
 func take_damage(value):
 	health -= value
+
+#func attack():
+	#animation_player.play("player_attack")

@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://csfbdltbiyn03"]
+[gd_scene load_steps=14 format=3 uid="uid://bevavacy5tss2"]
 
-[ext_resource type="Script" path="res://Coding/Combat Related/Sprite/character.gd" id="1_bsf0u"]
-[ext_resource type="Texture2D" uid="uid://bhybv1hbttmx3" path="res://Art Assets/UI/Spritesheet_UI_Flat_Select_02.png" id="2_0t5p2"]
-[ext_resource type="Texture2D" uid="uid://ble351fc1hof6" path="res://Art Assets/Misc/Ready_00_32.png" id="3_qy36r"]
-[ext_resource type="Texture2D" uid="uid://dncbm4w2w3533" path="res://Art Assets/Misc/cursor_finger.png" id="4_ofmh1"]
+[ext_resource type="Script" path="res://Coding/Combat Related/Sprite/character.gd" id="1_qqum0"]
+[ext_resource type="Texture2D" uid="uid://bhybv1hbttmx3" path="res://Art Assets/UI/Spritesheet_UI_Flat_Select_02.png" id="2_i8xhr"]
+[ext_resource type="Texture2D" uid="uid://dpbwmmvhrv5pi" path="res://Art Assets/NPC/Characters/Knight1_Idle.png" id="3_jnrpa"]
+[ext_resource type="Texture2D" uid="uid://dncbm4w2w3533" path="res://Art Assets/Misc/cursor_finger.png" id="4_g1ke7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tfkt"]
 radius = 5.09902
@@ -87,46 +87,34 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:scale")
+tracks/4/path = NodePath("Select:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2.075, 2.248)]
+"update": 1,
+"values": [0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Select:frame")
+tracks/5/path = NodePath("Focus:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [false]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Focus:visible")
+tracks/6/path = NodePath("Select:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Select:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -197,7 +185,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2.075, 2.248), Vector2(2.48, 2.753)]
+"values": [Vector2(3.693, 4), Vector2(4.504, 5)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -328,8 +316,8 @@ _data = {
 "select": SubResource("Animation_w0844")
 }
 
-[node name="Character" type="CharacterBody2D"]
-script = ExtResource("1_bsf0u")
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_qqum0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -339,12 +327,15 @@ shape = SubResource("CircleShape2D_1tfkt")
 visible = false
 position = Vector2(-1.5, 5)
 scale = Vector2(2.40625, 3.125)
-texture = ExtResource("2_0t5p2")
+texture = ExtResource("2_i8xhr")
 hframes = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.075, 2.248)
-texture = ExtResource("3_qy36r")
+scale = Vector2(3.693, 4)
+texture = ExtResource("3_jnrpa")
+hframes = 4
+vframes = 2
+frame = 6
 
 [node name="Focus" type="Sprite2D" parent="."]
 visible = false
@@ -352,13 +343,13 @@ modulate = Color(0.776471, 0.776471, 0.776471, 1)
 self_modulate = Color(0.972549, 0.972549, 0.972549, 1)
 position = Vector2(-39, 2)
 scale = Vector2(0.335, 0.335)
-texture = ExtResource("4_ofmh1")
+texture = ExtResource("4_g1ke7")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -50.0
-offset_top = -59.0
-offset_right = 107.0
-offset_bottom = -31.0
+offset_left = -59.0
+offset_top = -61.0
+offset_right = 119.0
+offset_bottom = -33.0
 scale = Vector2(0.65, 0.65)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2

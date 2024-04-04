@@ -20,10 +20,10 @@ grow_vertical = 2
 texture = ExtResource("1_w25me")
 
 [node name="Enemy_Group" parent="." instance=ExtResource("2_e270w")]
-position = Vector2(182, 102)
+position = Vector2(749, 99)
 
 [node name="Player_Group" parent="." instance=ExtResource("3_gua55")]
-position = Vector2(750, 102)
+position = Vector2(192, 99)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

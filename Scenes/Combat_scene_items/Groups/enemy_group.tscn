@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtpbxiint7p1k"]
 
-[ext_resource type="PackedScene" uid="uid://csfbdltbiyn03" path="res://Scenes/Combat_scene_items/Editable Sprite/character.tscn" id="1_k0enh"]
 [ext_resource type="Script" path="res://Coding/Combat Related/Groups/enemy_group.gd" id="1_ohmbr"]
+[ext_resource type="PackedScene" uid="uid://bevavacy5tss2" path="res://Scenes/Combat_scene_items/Editable Sprite/Enemy.tscn" id="2_56pad"]
 
 [node name="Enemy_Group" type="Node2D"]
 script = ExtResource("1_ohmbr")
 
-[node name="Character" parent="." instance=ExtResource("1_k0enh")]
+[node name="Enemy" parent="." instance=ExtResource("2_56pad")]
 
-[node name="Character2" parent="." instance=ExtResource("1_k0enh")]
+[node name="Enemy2" parent="." instance=ExtResource("2_56pad")]
 
-[node name="Character3" parent="." instance=ExtResource("1_k0enh")]
+[node name="Enemy3" parent="." instance=ExtResource("2_56pad")]
 
-[node name="Character4" parent="." instance=ExtResource("1_k0enh")]
+[node name="Enemy4" parent="." instance=ExtResource("2_56pad")]
