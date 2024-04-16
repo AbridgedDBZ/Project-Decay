@@ -142,8 +142,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yka4o"]
-radius = 3.0
-height = 14.0
+radius = 5.0
+height = 16.0
 
 [node name="Maatet" type="Node2D"]
 y_sort_enabled = true
@@ -151,6 +151,7 @@ y_sort_enabled = true
 [node name="Maatet" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("1_ar5ms")
+speed = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Maatet"]
 sprite_frames = SubResource("SpriteFrames_w68q5")
@@ -165,5 +166,5 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_yka4o")
 
 [node name="Camera2D" type="Camera2D" parent="Maatet"]
-position = Vector2(0, -18)
 zoom = Vector2(2.5, 2.5)
+position_smoothing_speed = 2.0
