@@ -1,3 +1,4 @@
+class_name Maatet
 extends CharacterBody2D
 
 @export var speed = 150
